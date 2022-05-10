@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.3)
+project(Speedrun)
+include(.cs211/cmake/CMakeLists.txt)
+
+set(MODEL_SRC
+        src/block.cxx
+        src/board.cxx
+        src/player.cxx
+        src/mob.cxx
+        src/model.cxx)
+
+add_program(main
+    src/main.cxx
+        src/controller.cxx
+        src/view.cxx
+    ${MODEL_SRC})
+target_link_libraries(main ge211)
+
+add_test_program(model_test
+        test/board_test.cxx
+    ${MODEL_SRC})
+target_link_libraries(model_test ge211)
+
+# vim: ft=cmake

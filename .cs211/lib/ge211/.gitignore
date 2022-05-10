@@ -1,0 +1,10 @@
+# CLion
+.idea/*
+!.idea/codeStyles
+!.idea/inspectionProfiles
+!.idea/misc.xml
+
+# Build directories:
+build/
+builds/
+cmake-build-*/
